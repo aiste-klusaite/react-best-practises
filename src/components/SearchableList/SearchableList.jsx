@@ -23,7 +23,7 @@ export default function SearchableList({ items, itemKeyFn, children }) {
     <div className="searchable-list">
       <input type="search" placeholder="Search" onChange={handleChange} />
       <ul>
-        {searchResults?.map((item, index) => (
+        {searchResults?.map((item) => (
           <li key={itemKeyFn(item)}>{children(item)}</li>
         ))}
       </ul>
